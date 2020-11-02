@@ -1,0 +1,15 @@
+.leaflet-container {
+	background-color: rgb(138, 203, 207);
+}
+.title {
+	font-weight: bold;
+}
+.red-text {
+	color: rgb(231, 77, 77);
+}
+.green-text {
+	color: rgb(17, 138, 17);
+}
+.blue-text {
+	color: rgb(43, 43, 212);
+}

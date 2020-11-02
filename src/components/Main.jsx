@@ -1,22 +1,35 @@
 import { useState, useEffect } from 'react';
-import Map from './Map';
-import mapService from '../services/mapService';
+import CovidMap from './CovidMap';
+import covidCountryService from '../services/covidCountryService';
 
+import LoaderGif from '../assets/loader.gif';
 
 const Main = () => {
-
 	const [countries, setCountries] = useState([]);
 
 	useEffect(() => {
-		const data = mapService.getCountries();
-		console.log(data);
-		setCountries(data);
+		covidCountryService.configureCountries((countries) =>
+			setCountries(countries)
+		);
 	}, []);
 
+	const loaderStyles = {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		height: '100vh',
+	};
+
 	return (
-		<div>
-			<Map></Map>
-		</div>
+		<>
+			{countries.length <= 0 ? (
+				<div style={loaderStyles}>
+					<img src={LoaderGif} alt="loading...." />
+				</div>
+			) : (
+				<CovidMap countries={countries}></CovidMap>
+			)}
+		</>
 	);
 };
 
