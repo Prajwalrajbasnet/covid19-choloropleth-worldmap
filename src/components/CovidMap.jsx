@@ -31,12 +31,13 @@ const CovidMap = ({ countries }) => {
 				country.properties.covidData.Recovered
 			)}
 		`);
+		layer.options.fillColor = country.properties.color;
 	};
 
 	console.log(countries);
 
 	return (
-		<MapContainer style={{ height: '100vh' }} zoom={2} center={[20, 100]}>
+		<MapContainer style={{ height: '90vh' }} zoom={2} center={[20, 100]}>
 			<GeoJSON
 				style={mapStyle}
 				data={countries}

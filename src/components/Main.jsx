@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
+
 import CovidMap from './CovidMap';
+import Legend from './Legend';
+
 import covidCountryService from '../services/covidCountryService';
+import legendItems from '../entities/LegendItems';
 
 import LoaderGif from '../assets/loader.gif';
 
@@ -27,7 +31,10 @@ const Main = () => {
 					<img src={LoaderGif} alt="loading...." />
 				</div>
 			) : (
-				<CovidMap countries={countries}></CovidMap>
+				<div>
+					<CovidMap countries={countries}></CovidMap>
+					<Legend legendItems={legendItems}></Legend>
+				</div>
 			)}
 		</>
 	);
