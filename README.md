@@ -19,3 +19,5 @@ Start the application!
 `yarn start`
 
 Now your browser should automatically open the app if not go to https://localhost:3000 where you would see something like this :-
+
+![picture 1](images/342726970a9a2866482a7b51dcb602c94dc1c8eff9e9a3be650579ace7fe8bee.png)
