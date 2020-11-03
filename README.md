@@ -1,6 +1,8 @@
 # Covid-19 Chloropleth map visualizer
 
-Map application showing the world map with chloropleth visualization with different colour indication according to the number of active cases. App shows the details of cases for each country when clicked on respective country
+Map application showing the world map with chloropleth visualization with different colour indication according to the number of active cases. App shows the details of cases for each country when clicked on respective country.
+
+The map is built using [React Leaflet](https://react-leaflet.js.org/) with live covid cases data from [Johns Hopkins](https://github.com/CSSEGISandData/COVID-19) which updates data every hour.
 
 See [Demo](https://prajwalrajbasnet.github.io/covid19-choloropleth-worldmap/)
 
